@@ -140,14 +140,14 @@ export default function Movieapp(){
     const[pic,setPic]= useState(movi[0]);
     const[name,setName]= useState(movi[0]);
     // const[trailer,setTrailer]= useState(movies[0]);
-
+var disc = "io"
 const navigate=useNavigate();
 
 useEffect(()=>{
   fetch(`${API}/movies`)
   .then((data)=>data.json())
   .then((movies)=>setMovi(movies));
-},[]);
+},[disc]);
 
     return(
         
